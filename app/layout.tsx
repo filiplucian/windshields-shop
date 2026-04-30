@@ -15,7 +15,7 @@ export const viewport: Viewport = {
   themeColor: '#D41111',
 }
 
-const SITE_URL = 'https://parbrizebadilita.ro'
+const SITE_URL = 'https://parbrizeradauti.ro'
 const OG_TITLE = 'Parbrize Rădăuți | Centru de Parbrize Bădiliță'
 const OG_DESCRIPTION =
   'Reparații și montaj parbrize în Rădăuți — intervenție 30–60 min, parbrize OEM, decontare CASCO, tratament hidrofob, garanție. Sună acum: 0754 760 568.'
@@ -142,15 +142,19 @@ export const metadata: Metadata = {
     'geo.region': 'RO-SV',
     'geo.placename': 'Rădăuți, Suceava, România',
     'geo.position': '47.8498;25.9194',
-    'ICBM': '47.8498, 25.9194',
+    ICBM: '47.8498, 25.9194',
     // AI / LLM search engines
-    'robots': 'index, follow, max-image-preview:large',
+    robots: 'index, follow, max-image-preview:large',
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="ro" className={dmSans.variable}>
+    <html lang='ro' className={dmSans.variable}>
       <body>{children}</body>
     </html>
   )

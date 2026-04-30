@@ -17,7 +17,7 @@
 | **Denumire**       | Centru de Parbrize Bădiliță                                                                                       |
 | **Adresă**         | str. Salcâmilor, nr 129, Rădăuți                                                                                  |
 | **Telefoane**      | 0754760568, 0744509464                                                                                            |
-| **Email**          | contact@parbrizebadilita.ro                                                                                       |
+| **Email**          | contact@parbrizeradauti.ro                                                                                        |
 | **Branding**       | Roșu, Gri, Negru                                                                                                  |
 | **Motto**          | "Parbrize montate corect, fără griji și fără timp pierdut."                                                       |
 | **Keywords**       | reparatii parbrize, reparatie parbriz, service parbrize, parbrize Rădăuți, depozit parbrize                       |
@@ -159,7 +159,7 @@ module.exports = nextConfig
 
 ```
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=...
-CONTACT_EMAIL=contact@parbrizebadilita.ro
+CONTACT_EMAIL=contact@parbrizeradauti.ro
 SMTP_HOST=...
 SMTP_PORT=...
 SMTP_USER=...
@@ -189,7 +189,7 @@ export const SEO_CONFIG = {
   },
   twitter: {
     card: 'summary_large_image',
-    creator: '@parbrizebadilita',
+    creator: '@parbrizeradauti',
   },
 }
 
@@ -238,7 +238,7 @@ export const LOCAL_BUSINESS_SCHEMA = {
     addressCountry: 'RO',
   },
   telephone: '+40754760568',
-  email: 'contact@parbrizebadilita.ro',
+  email: 'contact@parbrizeradauti.ro',
   url: 'https://yourdomain.com',
   areaServed: SERVICE_AREAS,
   priceRange: '$$',
@@ -712,7 +712,7 @@ După completarea tuturor etapelor, pagina este gata pentru lansare pe producți
 
 - Adresă: str. Salcâmilor, nr 129, Rădăuți
 - Telefoane: 0754760568, 0744509464
-- Email: contact@parbrizebadilita.ro (dacă există)
+- Email: contact@parbrizeradauti.ro (dacă există)
 - Program de lucru (dacă dorești)
 - Linkuri social media
 

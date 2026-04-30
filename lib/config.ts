@@ -1,9 +1,9 @@
 export const SITE_CONFIG = {
   name: 'Centru de Parbrize Bădiliță',
-  domain: 'parbrizebadilita.ro',
+  domain: 'parbrizeradauti.ro',
   phones: ['0754 760 568', '0744 509 464'],
   phonesRaw: ['+40754760568', '+40744509464'],
-  email: 'contact@parbrizebadilita.ro',
+  email: 'contact@parbrizeradauti.ro',
   address:
     'str. Ștefan cel Mare, nr. 129, Rădăuți (intrare de pe str. Salcâmilor)',
   city: 'Rădăuți',

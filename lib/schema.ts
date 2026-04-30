@@ -1,6 +1,6 @@
 import { SITE_CONFIG, SERVICE_AREAS } from './config'
 
-const SITE_URL = 'https://parbrizebadilita.ro'
+const SITE_URL = 'https://parbrizeradauti.ro'
 const MAPS_URL =
   'https://www.google.com/maps/search/Centrul+de+Parbrize+Badilita+Radauti'
 
@@ -80,7 +80,8 @@ export const LOCAL_BUSINESS_SCHEMA = {
         itemOffered: {
           '@type': 'Service',
           name: 'Reparație Parbriz',
-          description: 'Reparare fisuri, ciobituri și lovituri de piatră cu rășină injectată sub vacuum. Rezultat invizibil în 30–60 minute.',
+          description:
+            'Reparare fisuri, ciobituri și lovituri de piatră cu rășină injectată sub vacuum. Rezultat invizibil în 30–60 minute.',
         },
       },
       {
@@ -88,7 +89,8 @@ export const LOCAL_BUSINESS_SCHEMA = {
         itemOffered: {
           '@type': 'Service',
           name: 'Montaj Parbriz Nou',
-          description: 'Înlocuire parbrize originale OEM și after-market certificate. Peste 200 de modele în stoc. Adezivi profesionali cu uscare rapidă.',
+          description:
+            'Înlocuire parbrize originale OEM și after-market certificate. Peste 200 de modele în stoc. Adezivi profesionali cu uscare rapidă.',
         },
       },
       {
@@ -96,7 +98,8 @@ export const LOCAL_BUSINESS_SCHEMA = {
         itemOffered: {
           '@type': 'Service',
           name: 'Geamuri Laterale și Lunetă',
-          description: 'Înlocuire geamuri laterale și lunetă pentru toate tipurile de autovehicule.',
+          description:
+            'Înlocuire geamuri laterale și lunetă pentru toate tipurile de autovehicule.',
         },
       },
       {
@@ -104,7 +107,8 @@ export const LOCAL_BUSINESS_SCHEMA = {
         itemOffered: {
           '@type': 'Service',
           name: 'Tratament Hidrofob',
-          description: 'Aplicare tratament hidrofob pe suprafața parbrizului. Apa se respinge instant, vizibilitate maximă pe ploaie.',
+          description:
+            'Aplicare tratament hidrofob pe suprafața parbrizului. Apa se respinge instant, vizibilitate maximă pe ploaie.',
         },
       },
       {
@@ -112,20 +116,19 @@ export const LOCAL_BUSINESS_SCHEMA = {
         itemOffered: {
           '@type': 'Service',
           name: 'Decontare CASCO',
-          description: 'Emitem factură detaliată pentru decontare prin asigurarea CASCO. Asistență completă pentru dosarul de daună.',
+          description:
+            'Emitem factură detaliată pentru decontare prin asigurarea CASCO. Asistență completă pentru dosarul de daună.',
         },
       },
     ],
   },
 
-  areaServed: SERVICE_AREAS.map((name) => ({
+  areaServed: SERVICE_AREAS.map(name => ({
     '@type': 'City',
     name,
   })),
 
-  sameAs: [
-    'https://www.facebook.com/centrudeparbrize/',
-  ],
+  sameAs: ['https://www.facebook.com/centrudeparbrize/'],
 
   aggregateRating: {
     '@type': 'AggregateRating',
