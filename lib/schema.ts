@@ -177,7 +177,7 @@ export const FAQ_SCHEMA = {
       name: 'Deserviți și localități din afara Rădăuțiului?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Da, deservim Horodnic de Sus, Horodnic de Jos, Marginea, Sucevița, Solca, Dornești, Siret, Frătăuți, Milișăuți și Vicov. Service mobil disponibil pentru unele zone.',
+        text: 'Da, deservim toate localitățile din zona Rădăuți pe o rază de aproximativ 40 km: Horodnic de Sus, Horodnic de Jos, Marginea, Sucevița, Solca, Dornești, Siret, Frătăuți, Milișăuți, Vicov, Brodina, Fălcău, Straja, Voitinel, Bilca, Putna, Arbore, Volovăț. Service mobil disponibil pentru unele zone.',
       },
     },
     {

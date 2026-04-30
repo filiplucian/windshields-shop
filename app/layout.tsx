@@ -1,18 +1,11 @@
 import type { Metadata, Viewport } from 'next'
-import { Poppins, Inter } from 'next/font/google'
+import { DM_Sans } from 'next/font/google'
 import './globals.css'
 
-const poppins = Poppins({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
-  variable: '--font-poppins',
-  display: 'swap',
-})
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-inter',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-dm-sans',
   display: 'swap',
 })
 
@@ -87,6 +80,21 @@ export const metadata: Metadata = {
     'parbrize Fratautii Noi',
     'parbrize Milisauti',
     'parbrize Vicov',
+    'parbrize Brodina',
+    'parbrize Falcau',
+    'parbrize Straja',
+    'parbrize Voitinel',
+    'parbrize Bilca',
+    'parbrize Putna',
+    'parbrize Arbore',
+    'parbrize Volovat',
+    // Variante cu diacritice
+    'parbrize Fălcău',
+    'parbrize Volovăț',
+    // Cautari regionale
+    'service parbrize zona Radauti',
+    'service parbrize nord Suceava',
+    'reparatii parbrize Bucovina',
   ].join(', '),
 
   robots: {
@@ -142,7 +150,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ro" className={`${poppins.variable} ${inter.variable}`}>
+    <html lang="ro" className={dmSans.variable}>
       <body>{children}</body>
     </html>
   )

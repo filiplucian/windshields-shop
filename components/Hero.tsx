@@ -4,33 +4,38 @@ import { SITE_CONFIG } from '@/lib/config'
 export default function Hero() {
   return (
     <section className='relative min-h-[100svh] flex items-center pt-14 md:pt-20 overflow-hidden bg-brand-black'>
-
       {/* Background photo */}
       <Image
-        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&q=90&auto=format&fit=crop"
-        alt=""
+        src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&q=90&auto=format&fit=crop'
+        alt=''
         fill
         priority
-        sizes="100vw"
-        className="object-cover object-center"
+        sizes='100vw'
+        className='object-cover object-center pointer-events-none'
       />
 
       {/* Dark overlay – asigură lizibilitate text */}
-      <div className='absolute inset-0 bg-brand-black/75' />
+      <div className='absolute inset-0 bg-brand-black/75 pointer-events-none' />
 
       {/* Gradient roșu subtil dinspre stânga-jos */}
-      <div className='absolute inset-0 bg-gradient-to-tr from-brand-dark-red/40 via-transparent to-transparent' />
+      <div className='absolute inset-0 bg-gradient-to-tr from-brand-dark-red/40 via-transparent to-transparent pointer-events-none' />
 
       {/* Decorative circle */}
-      <div className='absolute -top-10 -right-10 w-64 h-64 lg:w-96 lg:h-96 rounded-full border-4 border-brand-red opacity-10 lg:opacity-15' />
+      <div className='absolute -top-10 -right-10 w-64 h-64 lg:w-96 lg:h-96 rounded-full border-4 border-brand-red opacity-10 lg:opacity-15 pointer-events-none' />
 
       <div className='relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20'>
         <div className='max-w-3xl'>
           {/* Badge */}
           <span className='relative overflow-hidden inline-flex items-baseline gap-1 bg-brand-red/20 border border-brand-red text-brand-red font-heading uppercase tracking-widest px-4 py-2 rounded-full mb-5 hero-badge'>
-            <span className='text-base sm:text-lg font-bold text-white'>Centru</span>
-            <span className='text-xs font-normal text-white opacity-70'>de</span>
-            <span className='text-base sm:text-lg font-bold text-white'>Parbrize</span>
+            <span className='text-base sm:text-lg font-bold text-white'>
+              Centru
+            </span>
+            <span className='text-xs font-normal text-white opacity-70'>
+              de
+            </span>
+            <span className='text-base sm:text-lg font-bold text-white'>
+              Parbrize
+            </span>
             <span className='text-base sm:text-lg font-bold'>Bădiliță</span>
             <span className='text-xs font-normal opacity-50 mx-0.5'>·</span>
             <span className='text-base sm:text-lg font-bold'>Rădăuți</span>

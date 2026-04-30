@@ -27,4 +27,12 @@ export const SERVICE_AREAS = [
   'Frătăuți',
   'Milișăuți',
   'Vicov',
+  'Brodina',
+  'Fălcău',
+  'Straja',
+  'Voitinel',
+  'Bilca',
+  'Putna',
+  'Arbore',
+  'Volovăț',
 ]

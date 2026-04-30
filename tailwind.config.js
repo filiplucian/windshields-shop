@@ -18,8 +18,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
-        body: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        heading: ['var(--font-dm-sans)', 'DM Sans', 'sans-serif'],
+        body: ['var(--font-dm-sans)', 'DM Sans', 'sans-serif'],
       },
       backgroundImage: {
         'hero-gradient': 'linear-gradient(135deg, #111111 0%, #1E1E1E 50%, #8B0000 100%)',
