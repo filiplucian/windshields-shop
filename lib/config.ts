@@ -4,13 +4,14 @@ export const SITE_CONFIG = {
   phones: ['0754 760 568', '0744 509 464'],
   phonesRaw: ['+40754760568', '+40744509464'],
   email: 'contact@parbrizebadilita.ro',
-  address: 'str. Salcâmilor, nr. 129, Rădăuți',
+  address:
+    'str. Ștefan cel Mare, nr. 129, Rădăuți (intrare de pe str. Salcâmilor)',
   city: 'Rădăuți',
   county: 'Suceava',
   postalCode: '725400',
-  schedule: 'Luni–Sâmbătă: 08:00–18:00',
+  schedule: 'Luni–Vineri: 08:00–18:00 | Sâmbătă–Duminică: Închis',
   motto: 'Parbrize montate corect, fără griji și fără timp pierdut.',
-  tagline: 'VIZIBILITATE GARANTATĂ PENTRU MAȘINA TA!',
+  tagline: 'CA SĂ VEZI BINE',
   personality: ['RAPID', 'SIGUR', 'PROFESIONAL'],
 }
 
@@ -26,4 +27,12 @@ export const SERVICE_AREAS = [
   'Frătăuți',
   'Milișăuți',
   'Vicov',
+  'Brodina',
+  'Fălcău',
+  'Straja',
+  'Voitinel',
+  'Bilca',
+  'Putna',
+  'Arbore',
+  'Volovăț',
 ]
