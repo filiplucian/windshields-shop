@@ -6,7 +6,7 @@ export default function Map() {
     'https://www.google.com/maps/dir/?api=1&destination=Centrul+de+Parbrize+Badilita+Radauti'
 
   return (
-    <section className='py-12 sm:py-16 lg:py-20 bg-brand-black'>
+    <section id='locatie' className='py-12 sm:py-16 lg:py-20 bg-brand-black'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='text-center mb-8 sm:mb-10'>

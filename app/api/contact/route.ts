@@ -1,12 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { sanitizeInput, isValidEmail, isValidPhone, checkRateLimit } from '@/lib/security'
+import {
+  sanitizeInput,
+  isValidEmail,
+  isValidPhone,
+  checkRateLimit,
+} from '@/lib/security'
 
 export async function POST(req: NextRequest) {
   const ip = req.headers.get('x-forwarded-for') ?? 'unknown'
 
   if (!checkRateLimit(ip)) {
     return NextResponse.json(
-      { success: false, message: 'Prea multe cereri. Încearcă mai târziu sau sună-ne direct.' },
+      {
+        success: false,
+        message: 'Prea multe cereri. Încearcă mai târziu sau sună-ne direct.',
+      },
       { status: 429 }
     )
   }
@@ -15,7 +23,10 @@ export async function POST(req: NextRequest) {
   try {
     body = await req.json()
   } catch {
-    return NextResponse.json({ success: false, message: 'Date invalide.' }, { status: 400 })
+    return NextResponse.json(
+      { success: false, message: 'Date invalide.' },
+      { status: 400 }
+    )
   }
 
   const name = String(body.name ?? '').trim()
@@ -26,16 +37,31 @@ export async function POST(req: NextRequest) {
   const gdpr = Boolean(body.gdpr)
 
   if (!name || name.length < 2) {
-    return NextResponse.json({ success: false, message: 'Numele este obligatoriu.' }, { status: 400 })
+    return NextResponse.json(
+      { success: false, message: 'Numele este obligatoriu.' },
+      { status: 400 }
+    )
   }
   if (!phone || !isValidPhone(phone)) {
-    return NextResponse.json({ success: false, message: 'Numărul de telefon nu este valid.' }, { status: 400 })
+    return NextResponse.json(
+      { success: false, message: 'Numărul de telefon nu este valid.' },
+      { status: 400 }
+    )
   }
   if (email && !isValidEmail(email)) {
-    return NextResponse.json({ success: false, message: 'Adresa de email nu este validă.' }, { status: 400 })
+    return NextResponse.json(
+      { success: false, message: 'Adresa de email nu este validă.' },
+      { status: 400 }
+    )
   }
   if (!gdpr) {
-    return NextResponse.json({ success: false, message: 'Trebuie să accepți politica de confidențialitate.' }, { status: 400 })
+    return NextResponse.json(
+      {
+        success: false,
+        message: 'Trebuie să accepți politica de confidențialitate.',
+      },
+      { status: 400 }
+    )
   }
 
   const safeName = sanitizeInput(name)
@@ -45,7 +71,7 @@ export async function POST(req: NextRequest) {
   const smtpHost = process.env.SMTP_HOST
   const smtpUser = process.env.SMTP_USER
   const smtpPass = process.env.SMTP_PASS
-  const contactEmail = process.env.CONTACT_EMAIL ?? 'contact@parbrizebadilita.ro'
+  const contactEmail = process.env.CONTACT_EMAIL ?? 'contact@parbrizeradauti.ro'
 
   if (smtpHost && smtpUser && smtpPass) {
     try {
@@ -79,9 +105,18 @@ export async function POST(req: NextRequest) {
       })
     } catch (err) {
       console.error('Email error:', err)
-      return NextResponse.json({ success: false, message: 'Eroare la trimitere. Sunați-ne la 0754 760 568.' }, { status: 500 })
+      return NextResponse.json(
+        {
+          success: false,
+          message: 'Eroare la trimitere. Sunați-ne la 0754 760 568.',
+        },
+        { status: 500 }
+      )
     }
   }
 
-  return NextResponse.json({ success: true, message: 'Mesaj trimis cu succes!' })
+  return NextResponse.json({
+    success: true,
+    message: 'Mesaj trimis cu succes!',
+  })
 }

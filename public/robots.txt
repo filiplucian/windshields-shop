@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://parbrizebadilita.ro/sitemap.xml
+Sitemap: https://parbrizeradauti.ro/sitemap.xml
