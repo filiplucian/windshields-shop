@@ -1,0 +1,29 @@
+export const SITE_CONFIG = {
+  name: 'Centru de Parbrize Bădiliță',
+  domain: 'parbrizebadilita.ro',
+  phones: ['0754 760 568', '0744 509 464'],
+  phonesRaw: ['+40754760568', '+40744509464'],
+  email: 'contact@parbrizebadilita.ro',
+  address: 'str. Salcâmilor, nr. 129, Rădăuți',
+  city: 'Rădăuți',
+  county: 'Suceava',
+  postalCode: '725400',
+  schedule: 'Luni–Sâmbătă: 08:00–18:00',
+  motto: 'Parbrize montate corect, fără griji și fără timp pierdut.',
+  tagline: 'VIZIBILITATE GARANTATĂ PENTRU MAȘINA TA!',
+  personality: ['RAPID', 'SIGUR', 'PROFESIONAL'],
+}
+
+export const SERVICE_AREAS = [
+  'Rădăuți',
+  'Horodnic de Sus',
+  'Horodnic de Jos',
+  'Marginea',
+  'Sucevița',
+  'Solca',
+  'Dornești',
+  'Siret',
+  'Frătăuți',
+  'Milișăuți',
+  'Vicov',
+]
