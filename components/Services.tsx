@@ -42,8 +42,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 sm:mb-14">
           <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-brand-red inline-block" />
-            <span className="font-heading font-semibold text-brand-red uppercase tracking-widest text-xs sm:text-sm">Serviciile Noastre</span>
+            <span className="section-label">Serviciile Noastre</span>
           </div>
           <h2 className="section-title">Tot ce ai nevoie pentru parbrizul tău</h2>
           <p className="section-subtitle max-w-2xl mx-auto text-sm sm:text-base">

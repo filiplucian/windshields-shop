@@ -13,10 +13,7 @@ export default function Map() {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10">
           <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-brand-red inline-block" />
-            <span className="font-heading font-semibold text-brand-red uppercase tracking-widest text-xs sm:text-sm">
-              Locație
-            </span>
+            <span className="section-label">Locație</span>
           </div>
           <h2 className="section-title">Găsește-ne ușor</h2>
           <p className="font-body text-brand-mid-gray text-sm sm:text-base">

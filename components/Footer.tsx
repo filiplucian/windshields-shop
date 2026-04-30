@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="font-body text-brand-mid-gray text-sm leading-relaxed mb-4">
-              Vizibilitate garantată pentru mașina ta. Reparații și înlocuiri de parbrize rapide și profesionale în Rădăuți.
+              Ca să vezi bine. Reparații și înlocuiri de parbrize rapide și profesionale în Rădăuți.
             </p>
             <div className="flex flex-wrap items-center gap-3">
               {SITE_CONFIG.personality.map((t, i) => (

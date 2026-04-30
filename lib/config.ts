@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   postalCode: '725400',
   schedule: 'Luni–Sâmbătă: 08:00–18:00',
   motto: 'Parbrize montate corect, fără griji și fără timp pierdut.',
-  tagline: 'VIZIBILITATE GARANTATĂ PENTRU MAȘINA TA!',
+  tagline: 'CA SĂ VEZI BINE',
   personality: ['RAPID', 'SIGUR', 'PROFESIONAL'],
 }
 

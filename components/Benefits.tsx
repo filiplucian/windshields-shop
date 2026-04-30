@@ -55,10 +55,7 @@ export default function Benefits() {
         {/* Header */}
         <div className='text-center mb-14'>
           <div className='flex items-center justify-center gap-2 mb-3'>
-            <span className='w-2 h-2 rounded-full bg-brand-red inline-block' />
-            <span className='font-heading font-semibold text-brand-red uppercase tracking-widest text-sm'>
-              Beneficii
-            </span>
+            <span className='section-label'>Beneficii</span>
           </div>
           <h2 className='section-title'>Ce primești când alegi Bădiliță</h2>
           <p className='section-subtitle max-w-xl mx-auto'>

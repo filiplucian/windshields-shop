@@ -74,8 +74,7 @@ export default function ContactForm() {
           {/* Left – contact info */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-2 h-2 rounded-full bg-brand-red inline-block" />
-              <span className="font-heading font-semibold text-brand-red uppercase tracking-widest text-xs sm:text-sm">Contact</span>
+              <span className="section-label">Contact</span>
             </div>
             <h2 className="section-title">Programează o intervenție</h2>
             <p className="font-body text-brand-mid-gray mb-6 text-sm sm:text-base">

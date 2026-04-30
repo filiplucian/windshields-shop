@@ -40,8 +40,7 @@ export default function Testimonials() {
         {/* Header */}
         <div className="text-center mb-14">
           <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-brand-red inline-block" />
-            <span className="font-heading font-semibold text-brand-red uppercase tracking-widest text-sm">Testimoniale</span>
+            <span className="section-label">Testimoniale</span>
           </div>
           <h2 className="section-title">Ce spun clienții noștri</h2>
           <p className="section-subtitle">Peste 1.000 de clienți mulțumiți în Rădăuți și împrejurimi.</p>

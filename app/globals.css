@@ -30,6 +30,12 @@ body {
   }
 }
 
+@keyframes shine-sweep {
+  0%   { left: -100%; }
+  35%  { left: 150%; }
+  100% { left: 150%; }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-poppins), Poppins, sans-serif;
 }
@@ -48,6 +54,16 @@ img, svg, video {
   }
   .btn-whatsapp {
     @apply inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-heading font-bold uppercase tracking-wide px-5 py-3 rounded transition-colors duration-200 hover:bg-[#128C7E] active:scale-95 touch-manipulation select-none;
+  }
+  .section-label {
+    @apply relative overflow-hidden inline-flex items-center font-heading font-semibold text-brand-red uppercase tracking-widest text-sm sm:text-base px-3 py-1 rounded-full border border-brand-red/30 bg-brand-red/10;
+  }
+  .section-label::after {
+    content: '';
+    @apply absolute top-0 h-full w-1/2 pointer-events-none;
+    left: -100%;
+    background: linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.45) 50%, transparent 80%);
+    animation: shine-sweep 4s ease-in-out infinite;
   }
   .section-title {
     @apply font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-3 leading-tight;
