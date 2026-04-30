@@ -19,12 +19,8 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
+            <div className="mb-4">
               <BrandLogo size="sm" />
-              <div>
-                <span className="block font-heading font-bold text-xs text-white uppercase tracking-widest">Centru de</span>
-                <span className="block font-heading font-bold text-sm text-brand-red uppercase tracking-widest">Parbrize Bădiliță</span>
-              </div>
             </div>
             <p className="font-body text-brand-mid-gray text-sm leading-relaxed mb-4">
               Ca să vezi bine. Reparații și înlocuiri de parbrize rapide și profesionale în Rădăuți.

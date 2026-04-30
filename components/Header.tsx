@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { SITE_CONFIG } from '@/lib/config'
 
 function WhatsAppIcon({ className = 'w-5 h-5' }: { className?: string }) {
@@ -20,27 +21,16 @@ function FacebookIcon({ className = 'w-5 h-5' }: { className?: string }) {
 }
 
 function BrandLogo({ size = 'md' }: { size?: 'sm' | 'md' }) {
-  const w = size === 'sm' ? 44 : 52
-  const h = size === 'sm' ? 34 : 40
+  const h = size === 'sm' ? 40 : 48
   return (
-    <svg width={w} height={h} viewBox="0 0 56 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      {/* Windshield arc */}
-      <path d="M3 37 C3 14 12 3 28 3 C44 3 53 14 53 37" stroke="#D41111" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-      {/* Bottom edge */}
-      <line x1="3" y1="37" x2="53" y2="37" stroke="#C9C9C9" strokeWidth="1.5"/>
-      {/* Left wiper */}
-      <line x1="11" y1="36" x2="40" y2="11" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round"/>
-      <circle cx="11" cy="37" r="2.5" fill="#FFFFFF"/>
-      {/* Right wiper */}
-      <line x1="45" y1="36" x2="16" y2="11" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round"/>
-      <circle cx="45" cy="37" r="2.5" fill="#FFFFFF"/>
-      {/* Sparkle at intersection (~28, 23) */}
-      <line x1="28" y1="16" x2="28" y2="30" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round"/>
-      <line x1="21" y1="23" x2="35" y2="23" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round"/>
-      <line x1="23" y1="18" x2="33" y2="28" stroke="#FFFFFF" strokeWidth="1" strokeLinecap="round"/>
-      <line x1="33" y1="18" x2="23" y2="28" stroke="#FFFFFF" strokeWidth="1" strokeLinecap="round"/>
-      <circle cx="28" cy="23" r="3" fill="#D41111" stroke="#FFFFFF" strokeWidth="1"/>
-    </svg>
+    <Image
+      src="/logo.png"
+      alt="Centru de Parbrize Bădiliță"
+      height={h}
+      width={h * 3}
+      className="object-contain"
+      priority
+    />
   )
 }
 
@@ -63,13 +53,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-14 md:h-18">
 
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5 shrink-0 min-w-0" aria-label="Centru de Parbrize Bădiliță">
+          <a href="#" className="flex items-center shrink-0 min-w-0" aria-label="Centru de Parbrize Bădiliță">
             <BrandLogo size="sm" />
-            <div className="leading-tight hidden xs:block">
-              <span className="block font-heading font-bold text-xs text-white uppercase tracking-widest">Centru de</span>
-              <span className="block font-heading font-bold text-sm text-brand-red uppercase tracking-widest">Parbrize</span>
-              <span className="block font-heading font-bold text-xs text-brand-red uppercase tracking-widest">Bădiliță</span>
-            </div>
           </a>
 
           {/* Desktop nav */}

@@ -2,7 +2,7 @@ import { SITE_CONFIG, SERVICE_AREAS } from './config'
 
 const SITE_URL = 'https://parbrizebadilita.ro'
 const MAPS_URL =
-  'https://www.google.com/maps/place/str.+Salcamilor+nr+129+Radauti+Romania'
+  'https://www.google.com/maps/place/Centrul+de+Parbrize+Badilita+Radauti+Romania'
 
 export const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
@@ -17,7 +17,7 @@ export const LOCAL_BUSINESS_SCHEMA = {
   email: SITE_CONFIG.email,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'str. Salcâmilor, nr. 129',
+    streetAddress: 'str. Ștefan cel Mare, nr. 129',
     addressLocality: 'Rădăuți',
     addressRegion: 'Suceava',
     postalCode: '725400',
@@ -32,7 +32,7 @@ export const LOCAL_BUSINESS_SCHEMA = {
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
       opens: '08:00',
       closes: '18:00',
     },
