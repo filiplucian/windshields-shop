@@ -12,8 +12,13 @@ export default function Hero() {
       <div className='relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20'>
         <div className='max-w-3xl'>
           {/* Badge */}
-          <span className='inline-flex items-center bg-brand-red/20 border border-brand-red text-brand-red font-heading font-semibold text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-5'>
-            Centru de Parbrize Bădiliță · Rădăuți
+          <span className='relative overflow-hidden inline-flex items-baseline gap-1 bg-brand-red/20 border border-brand-red text-brand-red font-heading uppercase tracking-widest px-4 py-2 rounded-full mb-5 hero-badge'>
+            <span className='text-base sm:text-lg font-bold text-white'>Centru</span>
+            <span className='text-xs font-normal text-white opacity-70'>de</span>
+            <span className='text-base sm:text-lg font-bold text-white'>Parbrize</span>
+            <span className='text-base sm:text-lg font-bold'>Bădiliță</span>
+            <span className='text-xs font-normal opacity-50 mx-0.5'>·</span>
+            <span className='text-base sm:text-lg font-bold'>Rădăuți</span>
           </span>
 
           {/* Tagline */}
