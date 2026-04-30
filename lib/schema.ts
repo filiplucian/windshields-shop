@@ -2,19 +2,39 @@ import { SITE_CONFIG, SERVICE_AREAS } from './config'
 
 const SITE_URL = 'https://parbrizebadilita.ro'
 const MAPS_URL =
-  'https://www.google.com/maps/place/Centrul+de+Parbrize+Badilita+Radauti+Romania'
+  'https://www.google.com/maps/search/Centrul+de+Parbrize+Badilita+Radauti'
 
 export const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'AutoRepair',
+  '@id': `${SITE_URL}/#business`,
   name: SITE_CONFIG.name,
   description:
-    'Reparații și înlocuiri de parbrize rapide și profesionale pentru toate tipurile de autovehicule în Rădăuți și zone limitrofe.',
-  // image: `${SITE_URL}/og-image.jpg`,  // Adaugă public/og-image.jpg (1200×630px)
+    'Centru specializat în reparații și montaj parbrize în Rădăuți, județul Suceava. Oferim reparare fisuri și ciobituri, înlocuire parbrize originale OEM și after-market, montaj geamuri laterale, tratament hidrofob și decontare CASCO. Intervenție în 30–60 minute, garanție pe lucrări.',
+  logo: `${SITE_URL}/logo.png`,
+  image: `${SITE_URL}/logo.png`,
 
   url: SITE_URL,
   telephone: SITE_CONFIG.phonesRaw[0],
   email: SITE_CONFIG.email,
+
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      telephone: SITE_CONFIG.phonesRaw[0],
+      contactType: 'customer service',
+      availableLanguage: 'Romanian',
+      areaServed: 'RO',
+    },
+    {
+      '@type': 'ContactPoint',
+      telephone: SITE_CONFIG.phonesRaw[1],
+      contactType: 'customer service',
+      availableLanguage: 'Romanian',
+      areaServed: 'RO',
+    },
+  ],
+
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'str. Ștefan cel Mare, nr. 129',
@@ -23,12 +43,15 @@ export const LOCAL_BUSINESS_SCHEMA = {
     postalCode: '725400',
     addressCountry: 'RO',
   },
+
   geo: {
     '@type': 'GeoCoordinates',
     latitude: 47.8498,
     longitude: 25.9194,
   },
+
   hasMap: MAPS_URL,
+
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -36,15 +59,74 @@ export const LOCAL_BUSINESS_SCHEMA = {
       opens: '08:00',
       closes: '18:00',
     },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday', 'Sunday'],
+      opens: '00:00',
+      closes: '00:00',
+    },
   ],
+
   priceRange: '$$',
+  currenciesAccepted: 'RON',
+  paymentAccepted: 'Cash, Card, Transfer bancar',
+
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Servicii Parbrize Rădăuți',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Reparație Parbriz',
+          description: 'Reparare fisuri, ciobituri și lovituri de piatră cu rășină injectată sub vacuum. Rezultat invizibil în 30–60 minute.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Montaj Parbriz Nou',
+          description: 'Înlocuire parbrize originale OEM și after-market certificate. Peste 200 de modele în stoc. Adezivi profesionali cu uscare rapidă.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Geamuri Laterale și Lunetă',
+          description: 'Înlocuire geamuri laterale și lunetă pentru toate tipurile de autovehicule.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Tratament Hidrofob',
+          description: 'Aplicare tratament hidrofob pe suprafața parbrizului. Apa se respinge instant, vizibilitate maximă pe ploaie.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Decontare CASCO',
+          description: 'Emitem factură detaliată pentru decontare prin asigurarea CASCO. Asistență completă pentru dosarul de daună.',
+        },
+      },
+    ],
+  },
+
   areaServed: SERVICE_AREAS.map((name) => ({
     '@type': 'City',
     name,
   })),
+
   sameAs: [
     'https://www.facebook.com/centrudeparbrize/',
   ],
+
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
@@ -106,15 +188,35 @@ export const FAQ_SCHEMA = {
         text: 'De cele mai multe ori, da. Sunați-ne la 0754 760 568 sau completați formularul de pe site și vă confirmăm disponibilitatea în cel mai scurt timp.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Ce este tratamentul hidrofob și merită aplicat?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Tratamentul hidrofob este un strat protector aplicat pe suprafața parbrizului care face apa să se respingă instant. Îmbunătățește vizibilitatea pe ploaie și protejează sticla. Recomandăm aplicarea după orice înlocuire de parbriz.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Unde vă găsesc?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ne găsești pe str. Ștefan cel Mare, nr. 129, Rădăuți (intrare de pe str. Salcâmilor). Program: Luni–Vineri 08:00–18:00. Telefon: 0754 760 568.',
+      },
+    },
   ],
 }
 
 export const WEBSITE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
   name: SITE_CONFIG.name,
   url: SITE_URL,
   inLanguage: 'ro',
+  publisher: {
+    '@id': `${SITE_URL}/#business`,
+  },
   potentialAction: {
     '@type': 'SearchAction',
     target: {

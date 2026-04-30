@@ -19,7 +19,11 @@ export default function Areas() {
             </p>
 
             {/* Primary city */}
-            <div className='flex items-center gap-3 bg-brand-red rounded-lg px-5 py-4 mb-4 w-fit'>
+            <a
+              href="https://www.google.com/maps/search/Centrul+de+Parbrize+Badilita+Radauti"
+              target="_blank"
+              rel="noopener noreferrer"
+              className='flex items-center gap-3 bg-brand-red rounded-lg px-5 py-4 mb-4 w-fit hover:bg-brand-dark-red transition-colors'>
               <svg
                 className='w-5 h-5 text-white'
                 fill='none'
@@ -40,7 +44,7 @@ export default function Areas() {
               <span className='font-heading font-bold text-white uppercase tracking-wide'>
                 {primary} – sediu principal
               </span>
-            </div>
+            </a>
 
             {/* Rest of areas */}
             <div className='grid grid-cols-2 sm:grid-cols-3 gap-2'>
