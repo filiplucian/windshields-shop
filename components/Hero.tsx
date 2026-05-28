@@ -25,22 +25,6 @@ export default function Hero() {
 
       <div className='relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20'>
         <div className='max-w-3xl'>
-          {/* Badge */}
-          <span className='relative overflow-hidden inline-flex items-baseline gap-1 bg-brand-red/20 border border-brand-red text-brand-red font-heading uppercase tracking-widest px-4 py-2 rounded-full mb-5 hero-badge'>
-            <span className='text-base sm:text-lg font-bold text-white'>
-              Centru
-            </span>
-            <span className='text-xs font-normal text-white opacity-70'>
-              de
-            </span>
-            <span className='text-base sm:text-lg font-bold text-white'>
-              Parbrize
-            </span>
-            <span className='text-base sm:text-lg font-bold'>Bădiliță</span>
-            <span className='text-xs font-normal opacity-50 mx-0.5'>·</span>
-            <span className='text-base sm:text-lg font-bold'>Rădăuți</span>
-          </span>
-
           {/* Tagline */}
           <h1 className='font-heading font-bold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl uppercase leading-tight mb-5'>
             <span className='text-white'>Ca să </span>
@@ -49,11 +33,9 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className='font-body text-brand-mid-gray text-base sm:text-lg mb-3 max-w-2xl'>
-            Reparații rapide și înlocuiri de parbrize pentru toate tipurile de
-            autovehicule.
-          </p>
-          <p className='font-body text-brand-mid-gray text-sm sm:text-base mb-8 max-w-xl italic'>
-            &ldquo;{SITE_CONFIG.motto}&rdquo;
+            Iti oferim servicii rapide și profesionale de reparații și înlocuiri
+            a parbrizelor, din stoc sau la comanda, folosind tehnologie modernă
+            , în Rădăuți.
           </p>
 
           {/* CTAs */}

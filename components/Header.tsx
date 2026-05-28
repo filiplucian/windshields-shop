@@ -35,7 +35,7 @@ function BrandLogo({ size = 'md' }: { size?: 'sm' | 'md' }) {
       alt='Centru de Parbrize Bădiliță'
       height={size === 'sm' ? 32 : 44}
       width={size === 'sm' ? 120 : 165}
-      className='object-contain w-auto'
+      className='object-contain'
       priority
     />
   )
@@ -47,7 +47,6 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const navLinks = [
-    { label: 'Acasă', href: '#' },
     { label: 'Servicii', href: '#servicii' },
     { label: 'De Ce Noi', href: '#diferentiatori' },
     { label: 'Zone', href: '#zone' },
@@ -148,6 +147,12 @@ export default function Header() {
             </div>
 
             {/* Mobile: phone + hamburger label */}
+            <div className='flex lg:hidden items-center gap-2'>
+              <div>
+                <div>Radauti</div>
+                <div>L-V:9-18</div>
+              </div>
+            </div>
             <div className='flex lg:hidden items-center gap-2'>
               <a
                 href={`tel:${SITE_CONFIG.phonesRaw[0]}`}
