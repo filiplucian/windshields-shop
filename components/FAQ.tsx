@@ -1,7 +1,3 @@
-'use client'
-
-import { useState } from 'react'
-
 const faqs = [
   {
     question: 'Cât durează o reparație de parbriz?',
@@ -36,8 +32,6 @@ const faqs = [
 ]
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
-
   return (
     <section id='faq' className='py-20 bg-brand-black'>
       <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -55,33 +49,20 @@ export default function FAQ() {
         {/* Accordion */}
         <div className='space-y-3'>
           {faqs.map((faq, i) => (
-            <div
+            <details
               key={i}
               className='border border-white/10 rounded-lg overflow-hidden'>
-              <button
-                className='w-full flex items-center justify-between gap-4 px-6 py-5 text-left bg-brand-dark-gray hover:bg-brand-dark-gray/80 transition-colors'
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                aria-expanded={openIndex === i}>
+              <summary className='px-6 py-5 cursor-pointer list-none bg-brand-dark-gray hover:bg-brand-dark-gray/80 transition-colors'>
                 <span className='font-heading font-semibold text-white text-sm sm:text-base'>
                   {faq.question}
                 </span>
-                <span
-                  className='shrink-0 w-6 h-6 rounded-full border border-brand-red flex items-center justify-center text-brand-red font-bold transition-transform duration-300'
-                  style={{
-                    transform:
-                      openIndex === i ? 'rotate(45deg)' : 'rotate(0deg)',
-                  }}>
-                  +
-                </span>
-              </button>
-              {openIndex === i && (
-                <div className='px-6 py-5 bg-brand-dark-gray border-t border-white/5'>
-                  <p className='font-body text-brand-mid-gray text-sm leading-relaxed italic'>
-                    {faq.answer}
-                  </p>
-                </div>
-              )}
-            </div>
+              </summary>
+              <div className='px-6 py-5 bg-brand-dark-gray border-t border-white/5'>
+                <p className='font-body text-brand-mid-gray text-sm leading-relaxed italic'>
+                  {faq.answer}
+                </p>
+              </div>
+            </details>
           ))}
         </div>
       </div>

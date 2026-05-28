@@ -155,6 +155,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ro' className={dmSans.variable}>
+      <head>
+        <link rel='preconnect' href='https://maps.google.com' />
+        <link rel='preconnect' href='https://www.google.com' />
+        <link rel='preconnect' href='https://fonts.googleapis.com' crossOrigin='anonymous' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+      </head>
       <body>{children}</body>
     </html>
   )

@@ -13,6 +13,9 @@ const csp = [
 
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    optimizeCss: true,
+  },
   images: {
     remotePatterns: [{ protocol: 'https', hostname: '**' }],
   },
